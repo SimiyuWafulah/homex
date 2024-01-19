@@ -1,5 +1,6 @@
 import React from 'react'
 import Oauth from '../components/Oauth'
+import { Link } from 'react-router-dom'
 
 export default function SignUp() {
   return (
@@ -27,6 +28,12 @@ export default function SignUp() {
       <button className='bg-slate-700 text-white p-3 rounded-lg hover:opacity-95 disabled:opacity-80 uppercase'>Sign Up</button>
       <Oauth/>
      </form>
+     <div className='flex gap-2 mt-5'>
+      <p>Alreadyy have an account?</p>
+      <Link to ='/signin'>
+        <span className='text-blue-700'>Sign In</span>
+      </Link>
+     </div>
     </div>
   )
 }
