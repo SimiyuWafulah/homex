@@ -83,12 +83,26 @@ export default function SignUp() {
       <Oauth/>
      </form>
      <div className='flex gap-2 mt-5'>
-      <p>Alreadyy have an account?</p>
+      <p>Already have an account?</p>
       <Link to ='/signin'>
         <span className='text-blue-700'>Sign In</span>
       </Link>
      </div>
-     <ToastContainer/>
+     <ToastContainer
+      position="top-right" 
+        autoClose={5000}
+        hideProgressBar={false} 
+        newestOnTop={false} 
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        style={{ 
+          zIndex: 1000,
+          fontSize: '1rem'
+        }}
+     />
     </div>
   )
 }
