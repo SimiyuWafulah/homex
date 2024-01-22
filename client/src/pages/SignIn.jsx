@@ -58,6 +58,7 @@ export default function SignIn() {
         id='email'
         className='border p-3 rounded-lg'
         onChange={handleChange}
+        required
       />
       <input
         type='password'
@@ -65,6 +66,7 @@ export default function SignIn() {
         id='password'
         className='border p-3 rounded-lg'
         onChange={handleChange}
+        required
       />
       <button
       disabled ={loading} 
