@@ -19,7 +19,7 @@ export default function Oauth() {
         method:'POST',
         mode: 'cors',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({name: result.user.displayName, email: result.user.email, photo: result.user.photoURL})
       })
