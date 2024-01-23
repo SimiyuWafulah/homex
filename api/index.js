@@ -5,6 +5,7 @@ import authRouter from './routes/auth.route.js'
 import dotenv from 'dotenv'
 import { errorMiddleware } from './middlewares/error.middleware.js';
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 dotenv.config();
 
 const app = express();
@@ -14,8 +15,10 @@ app.use((cors({
     origin: '*'
 })))
 
+app.use(cookieParser())
+
 mongoose.connect(process.env.MONGO).then(() => {
-    console.log('COnnected to Database')
+    console.log('Connected to Database')
 }).catch((error) => {
     console.log(error)
 });
